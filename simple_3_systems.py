@@ -65,7 +65,7 @@ scenarios = [
             's':   1.0,
             'b_a': 0.01,
             'r_a': 1.0,
-            'r_b': 0.80,
+            'r_b': 1.0,
             'b_b': 0.01
         },
         'diffusion_rates': {
@@ -104,7 +104,7 @@ fig, axes = plt.subplots(
 )
 
 plt.subplots_adjust(
-    top=0.92, bottom=0.15,
+    top=0.92, bottom=0.25,
     left=0.05, right=0.98,
     wspace=0.25, hspace=0.4
 )
@@ -159,7 +159,7 @@ for i, ((recA, recB), scen) in enumerate(zip(records, scenarios)):
         ", ".join(f"D_{k}={v}" for k,v in scen['diffusion_rates'].items())
     )
     axB.text(
-        0.5, -0.35,
+        0.5, -0.2,
         param_str,
         transform=axB.transAxes,
         ha='center',
